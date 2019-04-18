@@ -4,4 +4,16 @@
 
 .idea/*
 target/*
+/macro/project/target/*
+/server/project/target/*
+
+macro/.idea/*
+*.iml
+server/.idea/*
+server/target/*
+macro/target/*
+server/server.iml
 project/target/*
+project/project/*
+
+driver/target/*
