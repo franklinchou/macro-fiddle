@@ -1,4 +1,6 @@
-package macros
+package dynamic.macros
+
+import dynamic.schema.TypeSchema
 
 import scala.language.experimental.macros
 import scala.reflect.macros.blackbox
@@ -24,6 +26,25 @@ object SourceGenerator {
 
     // load the schema from JSON
     val schema = TypeSchema.fromJson(schemaPath)
+
+    // produce the list of constructor params
+    val params = schema.fields.map { f =>
+      val fieldName = TermName(f.name)
+      val fieldType = TermName(f.`type`.fullName)
+      q"val $fieldName: $fieldType"
+    }
+
+    val json = TypeSchema.toJson(schema)
+
+    // output case class definition
+    c.Expr(
+      q"""
+         case class $className(..$params) {
+           def schema = $json
+         }
+       """
+    )
+
   }
 
 }

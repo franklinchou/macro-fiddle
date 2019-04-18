@@ -1,5 +1,3 @@
 package dynamic.schema
 
-class Field {
-
-}
+case class Field(name: String, `type`: TypeName)
