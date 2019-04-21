@@ -1,6 +1,6 @@
 {
   "name": {
-    "fullName": "Foo"
+    "fullName": "dynamic.Test"
   },
   "comment": "Test schema to play with the generators",
   "fields": [

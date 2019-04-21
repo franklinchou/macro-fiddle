@@ -30,7 +30,7 @@ object SourceGenerator {
     // produce the list of constructor params
     val params = schema.fields.map { f =>
       val fieldName = TermName(f.name)
-      val fieldType = TermName(f.`type`.fullName)
+      val fieldType = TypeName(f.valueType.fullName)
       q"val $fieldName: $fieldType"
     }
 

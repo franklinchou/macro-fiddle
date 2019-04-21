@@ -36,5 +36,4 @@ object TypeSchema {
 }
 
 
-
 case class TypeSchema(name: TypeName, comment: String, fields: Seq[Field])
