@@ -1,0 +1,20 @@
+{
+  "name": {
+    "fullName": "Foo"
+  },
+  "comment": "Test schema to play with the generators",
+  "fields": [
+    {
+      "name": "bar",
+      "valueType": {
+        "fullName": "String"
+      }
+    },
+    {
+      "name": "baz",
+      "valueType": {
+        "fullName": "Int"
+      }
+    }
+  ]
+}
