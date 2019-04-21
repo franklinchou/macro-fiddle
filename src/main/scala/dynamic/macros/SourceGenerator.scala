@@ -3,12 +3,12 @@ package dynamic.macros
 import dynamic.schema.TypeSchema
 
 import scala.language.experimental.macros
-import scala.reflect.macros.blackbox
+import scala.reflect.macros.blackbox.Context
 
 
 object SourceGenerator {
 
-  def generate(c: blackbox.Context)(annottees: c.Expr[Any]*) = {
+  def generate(c: Context)(annottees: c.Expr[Any]*) = {
 
     import c.universe._
 
