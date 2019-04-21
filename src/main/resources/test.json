@@ -2,16 +2,16 @@
   "name": {
     "fullName": "dynamic.Test"
   },
-  "comment": "Test schema to play with the generators",
+  "comment": "Test schema",
   "fields": [
     {
-      "name": "bar",
+      "name": "param1",
       "valueType": {
         "fullName": "String"
       }
     },
     {
-      "name": "baz",
+      "name": "param2",
       "valueType": {
         "fullName": "Int"
       }
