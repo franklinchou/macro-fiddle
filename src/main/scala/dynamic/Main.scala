@@ -10,6 +10,7 @@ object Main extends App {
 
   println(schema.fields)
 
+  // Compiler is not finding the Test case class
   val t = Test("1", 2)
 
   println(t)
