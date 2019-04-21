@@ -11,7 +11,7 @@ object Main extends App {
   println(schema.fields)
 
   val t = Test("1", 2)
-  
+
   println(t)
 
 }
