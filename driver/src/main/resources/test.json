@@ -15,6 +15,12 @@
       "valueType": {
         "fullName": "Int"
       }
+    },
+    {
+      "name": "param3",
+      "valueType": {
+        "fullName": "LocalDate"
+      }
     }
   ]
 }

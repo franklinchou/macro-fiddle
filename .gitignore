@@ -14,5 +14,6 @@ server/target/*
 macro/target/*
 server/server.iml
 project/target/*
+project/project/*
 
 driver/target/*

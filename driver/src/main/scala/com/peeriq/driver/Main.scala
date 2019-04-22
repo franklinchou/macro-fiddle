@@ -1,9 +1,11 @@
 package com.peeriq.driver
 
+import java.time.LocalDate
+
 import com.peeriq.macros.FromSchema
 import com.peeriq.schema.TypeSchema
 
-@FromSchema("driver/src/main/resources/test.json") class Test
+@FromSchema("/home/franklin/Documents/dev/macro-fiddle/driver/src/main/resources/test.json") class Test
 
 object Main extends App {
 
@@ -13,6 +15,10 @@ object Main extends App {
   println(schema)
 
   // This doesn't compile (not found: value Test)
-  // val t = Test("test-1", 2)
+  val t = Test("test-1", 2, LocalDate.of(2019, 4, 22))
+
+  // println(t.param3)
+
+  println(t.param3.toString)
 
 }
