@@ -1,8 +1,8 @@
 {
   "name": {
-    "fullName": "dynamic.Test"
+    "fullName": "Test"
   },
-  "comment": "Test schema",
+  "comment": "Test schema description",
   "fields": [
     {
       "name": "param1",

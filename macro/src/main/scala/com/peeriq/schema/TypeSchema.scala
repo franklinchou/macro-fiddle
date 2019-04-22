@@ -9,7 +9,7 @@ object TypeSchema {
   private val mapper = new ObjectMapper().registerModule(DefaultScalaModule)
 
   /**
-    * Load com.peeriq.schema from Json string
+    * Load schema from Json string
     *
     * @param fileName
     * @return
@@ -24,7 +24,7 @@ object TypeSchema {
   }
 
   /**
-    * Write com.peeriq.schema out to Json string
+    * Write schema out to Json string
     *
     * @param schema
     * @return

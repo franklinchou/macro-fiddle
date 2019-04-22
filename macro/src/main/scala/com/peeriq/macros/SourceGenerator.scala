@@ -5,14 +5,13 @@ import com.peeriq.schema.TypeSchema
 import scala.language.experimental.macros
 import scala.reflect.macros.blackbox.Context
 
-
 object SourceGenerator {
 
   def generate(c: Context)(annottees: c.Expr[Any]*) = {
 
     import c.universe._
 
-    // retrieve the com.peeriq.schema path
+    // retrieve the schema path
     val schemaPath = c.prefix.tree match {
       case Apply(_, List(Literal(Constant(x)))) => x.toString
       case _ => c.abort(c.enclosingPosition, "com.peeriq.schema file path not specified")
@@ -24,7 +23,7 @@ object SourceGenerator {
       case _ => c.abort(c.enclosingPosition, "the annotation can only be used with classes")
     }
 
-    // load the com.peeriq.schema from JSON
+    // load the schema from JSON
     val schema = TypeSchema.fromJson(schemaPath)
 
     // produce the list of constructor params
