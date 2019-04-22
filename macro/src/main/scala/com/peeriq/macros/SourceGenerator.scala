@@ -1,6 +1,6 @@
-package dynamic.macros
+package com.peeriq.macros
 
-import dynamic.schema.TypeSchema
+import com.peeriq.schema.TypeSchema
 
 import scala.language.experimental.macros
 import scala.reflect.macros.blackbox.Context
@@ -12,10 +12,10 @@ object SourceGenerator {
 
     import c.universe._
 
-    // retrieve the schema path
+    // retrieve the com.peeriq.schema path
     val schemaPath = c.prefix.tree match {
       case Apply(_, List(Literal(Constant(x)))) => x.toString
-      case _ => c.abort(c.enclosingPosition, "schema file path not specified")
+      case _ => c.abort(c.enclosingPosition, "com.peeriq.schema file path not specified")
     }
 
     // retrieve the annotated class name
@@ -24,7 +24,7 @@ object SourceGenerator {
       case _ => c.abort(c.enclosingPosition, "the annotation can only be used with classes")
     }
 
-    // load the schema from JSON
+    // load the com.peeriq.schema from JSON
     val schema = TypeSchema.fromJson(schemaPath)
 
     // produce the list of constructor params

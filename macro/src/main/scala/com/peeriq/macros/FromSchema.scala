@@ -1,4 +1,4 @@
-package dynamic.macros
+package com.peeriq.macros
 
 import scala.annotation.StaticAnnotation
 import scala.language.experimental.macros

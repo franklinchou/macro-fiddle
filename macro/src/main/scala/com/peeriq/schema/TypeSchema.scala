@@ -1,4 +1,4 @@
-package dynamic.schema
+package com.peeriq.schema
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.scala.DefaultScalaModule
@@ -9,7 +9,7 @@ object TypeSchema {
   private val mapper = new ObjectMapper().registerModule(DefaultScalaModule)
 
   /**
-    * Load schema from Json string
+    * Load com.peeriq.schema from Json string
     *
     * @param fileName
     * @return
@@ -24,7 +24,7 @@ object TypeSchema {
   }
 
   /**
-    * Write schema out to Json string
+    * Write com.peeriq.schema out to Json string
     *
     * @param schema
     * @return

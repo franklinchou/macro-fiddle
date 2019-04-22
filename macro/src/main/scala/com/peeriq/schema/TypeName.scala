@@ -1,4 +1,4 @@
-package dynamic.schema
+package com.peeriq.schema
 
 case class TypeName(fullName: String) {
 

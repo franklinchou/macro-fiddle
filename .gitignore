@@ -4,4 +4,11 @@
 
 .idea/*
 target/*
-project/target/*
+/macro/project/target/*
+/server/project/target/*
+
+macro/.idea/*
+*.iml
+server/.idea/*
+server/target/*
+macro/target/*
