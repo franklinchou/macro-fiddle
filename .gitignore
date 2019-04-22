@@ -13,5 +13,6 @@ server/.idea/*
 server/target/*
 macro/target/*
 server/server.iml
+project/target/*
 
 driver/target/*
