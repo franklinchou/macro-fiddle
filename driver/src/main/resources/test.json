@@ -1,0 +1,26 @@
+{
+  "name": {
+    "fullName": "Test"
+  },
+  "comment": "Test schema description",
+  "fields": [
+    {
+      "name": "param1",
+      "valueType": {
+        "fullName": "String"
+      }
+    },
+    {
+      "name": "param2",
+      "valueType": {
+        "fullName": "Int"
+      }
+    },
+    {
+      "name": "param3",
+      "valueType": {
+        "fullName": "LocalDate"
+      }
+    }
+  ]
+}
