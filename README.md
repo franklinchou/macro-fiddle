@@ -1,5 +1,5 @@
 # Macro Fiddle
 
-## Local setup
+## Local setup (IntelliJ)
 
 - Import project by selecting `macro-fiddle/build.sbt`
