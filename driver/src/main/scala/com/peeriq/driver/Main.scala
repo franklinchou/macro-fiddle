@@ -12,6 +12,7 @@ object Main extends App {
   val schema = TypeSchema.fromJson("driver/src/main/resources/test.json")
   println(schema)
 
-  val t = Test("test-1", 2)
+  // This doesn't compile (not found: value Test)
+  // val t = Test("test-1", 2)
 
 }
