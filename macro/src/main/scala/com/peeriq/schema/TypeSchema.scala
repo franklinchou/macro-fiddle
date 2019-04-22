@@ -1,15 +1,16 @@
 package com.peeriq.schema
 
+import java.io.FileInputStream
+
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.scala.DefaultScalaModule
-import java.io.FileInputStream
 
 object TypeSchema {
 
   private val mapper = new ObjectMapper().registerModule(DefaultScalaModule)
 
   /**
-    * Load schema from Json string
+    * Load schema from Json
     *
     * @param fileName
     * @return
@@ -24,7 +25,7 @@ object TypeSchema {
   }
 
   /**
-    * Write schema out to Json string
+    * Write schema out to Json
     *
     * @param schema
     * @return
