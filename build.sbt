@@ -15,6 +15,7 @@ lazy val generators =
         "org.scala-lang" % "scala-reflect" % scalaVersion.value,
         // "com.fasterxml.jackson.core" % "jackson-databind" % "2.9.6",
         "com.fasterxml.jackson.module" %% "jackson-module-scala" % "2.9.6",
+        "com.fasterxml.jackson.dataformat" % "jackson-dataformat-csv" % "2.9.8",
         "org.scalamacros" % "paradise" % "2.1.1" cross CrossVersion.full
       ),
       addCompilerPlugin(paradisePlugin)

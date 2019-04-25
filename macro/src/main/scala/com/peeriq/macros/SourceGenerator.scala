@@ -1,6 +1,6 @@
 package com.peeriq.macros
 
-import com.peeriq.schema.TypeSchema
+import com.peeriq.schema.{CsvSchema, JsonSchema}
 
 import scala.language.experimental.macros
 import scala.reflect.macros.blackbox.Context
@@ -24,7 +24,10 @@ object SourceGenerator {
     }
 
     // load the schema from JSON
-    val schema = TypeSchema.fromJson(schemaPath)
+    // val schema = JsonSchema.fromJson(schemaPath)
+
+    // load schema from CSV
+    val schema = CsvSchema.fromCsv(schemaPath)
 
     // produce the list of constructor params
     val params = schema.fields.map { f =>
@@ -33,14 +36,12 @@ object SourceGenerator {
       q"val $fieldName: $fieldType"
     }
 
-    val json = TypeSchema.toJson(schema)
+    // val json = JsonSchema.toJson(schema)
 
     // output case class definition
     c.Expr(
       q"""
-         case class $className(..$params) {
-           def schema = $json
-         }
+         case class $className(..$params)
        """
     )
 

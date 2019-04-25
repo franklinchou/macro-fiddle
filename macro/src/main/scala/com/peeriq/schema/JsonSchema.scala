@@ -5,9 +5,9 @@ import java.io.FileInputStream
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.scala.DefaultScalaModule
 
-object TypeSchema {
+object JsonSchema {
 
-  private val mapper = new ObjectMapper().registerModule(DefaultScalaModule)
+  private lazy val jsonMapper = new ObjectMapper().registerModule(DefaultScalaModule)
 
   /**
     * Load schema from Json
@@ -15,10 +15,10 @@ object TypeSchema {
     * @param fileName
     * @return
     */
-  def fromJson(fileName: String): TypeSchema = {
+  def fromJson(fileName: String): JsonSchema = {
     val inStream = new FileInputStream(fileName)
     try {
-      mapper.readValue(inStream, classOf[TypeSchema])
+      jsonMapper.readValue(inStream, classOf[JsonSchema])
     } finally {
       inStream.close()
     }
@@ -30,10 +30,10 @@ object TypeSchema {
     * @param schema
     * @return
     */
-  def toJson(schema: TypeSchema): String = {
-    mapper.writeValueAsString(schema)
+  def toJson(schema: JsonSchema): String = {
+    jsonMapper.writeValueAsString(schema)
   }
 
 }
 
-case class TypeSchema(name: TypeName, comment: String, fields: Seq[Field])
+case class JsonSchema(name: TypeName, comment: String, fields: Seq[Field])

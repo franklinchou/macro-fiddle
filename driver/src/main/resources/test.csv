@@ -1,0 +1,3 @@
+id,index,name,definition,sql_data_type,data_models,data_model_names,nullable,default_value,fill_type,calculated_attributed,source_attributes,source_attribute_names,max_value,min_value,format_regex,column_name,summarize_method,platform_field_type,platform_exposed,max_value_attribute,max_value_attribute_name,min_value_attribute,min_value_attribute_name,possible_values
+0,0,originator,,varchar,,,0,,,0,,,,,,originator,,,0,,,,,
+1,1,originator_loan_id,,varchar,,,0,,,0,,,,,,originator_loan_id,,,0,,,,,
